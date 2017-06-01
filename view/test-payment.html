@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pt-br">
+	<head>
+		<title>Teste Payment</title>
+	</head>
+		
+		<body>
+			<script type="text/javascript" src="https://js.iugu.com/v2"></script>
+			<script type="text/javascript">
+				// MAP
+					//map('map', <?php echo $event->getAddress()->getMap()->getLatitude().','.$event->getAddress()->getMap()->getLongitude(); ?>, 13, 'roadmap', true, '<?php echo __PATH_FOR_LONG_URL__; ?>img/system/icon/pin.png');
+				
+				
+				Iugu.setAccountID("53d20287-2136-4fc2-a485-2c974fd1b5cc");
+				//Iugu.setAccountID("5700ed79ac55dab3c2f2835534ec833a");
+				Iugu.setTestMode(true);
+				
+				//alert(Iugu.utils.validateExpiration(5, 2016)+' - '+Iugu.utils.validateCreditCardNumber("5488260399504125")+' - '+Iugu.utils.validateCVV("514", Iugu.utils.getBrandByCreditCardNumber("5488260399504125"))+' - '+Iugu.utils.getBrandByCreditCardNumber("5488260399504125"));
+				alert(Iugu.utils.validateExpiration(6, 2021)+' - '+Iugu.utils.validateCreditCardNumber("4916742898351905")+' - '+Iugu.utils.validateCVV("524", Iugu.utils.getBrandByCreditCardNumber("4916742898351905"))+' - '+Iugu.utils.getBrandByCreditCardNumber("4916742898351905"));
+				
+				//var creditCard = Iugu.CreditCard('5488260399504125', '5', '2016', 'Vinicius', 'Abolari Thiengo', '514');
+				var creditCard = Iugu.CreditCard('4916742898351905', '6', '2021', 'Vinícius', 'Abolari Thiengo', '524');
+				Iugu.createPaymentToken(creditCard, function(response) {
+					if(response.errors){
+						alert("Erro salvando cartão");
+					}
+					else{
+						alert("Token criado:" + response.id);
+					}
+				});
+				
+			/*
+				Iugu.setAccountID("53d20287-2136-4fc2-a485-2c974fd1b5cc");
+				Iugu.setTestMode(true);
+				
+				//Iugu.createPaymentToken(this, tokenResponseHandler);
+				creditCard = Iugu.CreditCard("4111111111111111", "12", "2013", "Nome", "Sobrenome", "123");
+				Iugu.utils.validateCreditCardNumber("4111111111111111");
+				Iugu.utils.validateCVV("123", "visa"); // Retorna true
+				Iugu.utils.validateCVV("1234", "amex"); // Retorna true
+				Iugu.utils.validateCVV("3213", "mastercard");
+				Iugu.utils.validateExpiration(12, 2013);
+				Iugu.utils.getBrandByCreditCardNumber("4111111111111111");
+				creditCard.valid();
+				Iugu.createPaymentToken(creditCard, function(response) {
+					if(response.errors){
+						alert("Erro salvando cartão");
+					}
+					else{
+						alert("Token criado:" + response.id);
+					}
+				});*/
+			</script>
+		<!-- end FOOTER -->
+	</body>
+</html>

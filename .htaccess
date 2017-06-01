@@ -1,0 +1,17 @@
+RewriteEngine On # Turn on the rewriting engine RewriteRule
+RewriteRule ^([A-Za-z0-9-_]+)/?$ index.php?page=$1 [NC,L]
+RewriteRule ^([A-Za-z0-9-_]+)/([A-Za-z0-9-_]+)/?$ index.php?page=$1&subpage=$2 [NC,L]
+RewriteRule ^([A-Za-z0-9-_]+)/([A-Za-z0-9-_]*)/([A-Za-z0-9-_]*)/?$ index.php?page=$1&subpage=$2&subsubpage=$3 [NC,L]
+
+
+
+
+# compress gzip
+<IfModule mod_deflate.c>
+	AddOutputFilterByType DEFLATE text/text text/html text/plain text/xml text/css application/x-javascript application/javascript application/json
+</IfModule>
+
+
+
+# for ETag
+FileETag MTime Size

@@ -1,0 +1,4 @@
+set-tmp-main-img
+C:\wamp\tmp\php66AE.tmp
+image/jpeg
+8756

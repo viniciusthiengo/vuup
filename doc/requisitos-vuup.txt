@@ -1,0 +1,15 @@
+Funcionalidades VUUP:
+
+	// Home page
+		// HEADER
+			Botão criar evento (abrir modal box com opção de login convencional ou facebook login, se o usuário não estiver conectado)
+			Botão entrar (abrir modal box com opção de login convencional ou facebook login, se o usuário não estiver conectado)
+			Menu (Como funciona, planos e preço, suporte)
+			Busca (texto, estado, periodo)
+		
+		// MAIN
+			Lista de eventos (quadrados igual ao ingresse.com)
+		
+		// FOOTER
+			Menu (com as mesmas opções do topo)
+			

@@ -1,0 +1,21 @@
+#form-search #fs-search {
+	width: 222px;
+}
+#form-search #fs-submit {
+	padding: 8px 11px 8px 12px;
+}
+.aux-ie {
+	display: block;
+	clear: both;
+}
+#center .ribow-02 .how-it-works p.p-2{ margin-top: 195px; padding-left: 55px; }
+#center .ribow-02 .how-it-works p.p-4{ margin-top: 140px; padding-right: 55px; }
+#center .ribow-01 .partners p.p-2{ margin-top: 100px; padding-left: 35px; padding-right: 35px; color: #fff; }
+
+#center .ribow-01.main .top-menu .ribow-menu ul li a {
+	float: right;
+	margin-top: 5px;
+}
+#center .ribow-01.main .top-menu .ribow-menu ul li.share-content a{
+	bottom: -4px;
+}

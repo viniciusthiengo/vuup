@@ -1,0 +1,2 @@
+login: vuupadmin
+password: vuupevents2015
